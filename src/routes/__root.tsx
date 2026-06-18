@@ -87,11 +87,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Trusted residential & commercial plumber in Brownwood, TX. 24-hour emergency plumbing, leak detection, water line repair & more. Call (325) 641-2662." },
       { name: "author", content: "M. Webb Plumbing Co. LLC" },
       { property: "og:site_name", content: "M. Webb Plumbing Co." },
-      { property: "og:title", content: "M. Webb Plumbing Co. — Plumber in Brownwood, TX" },
-      { property: "og:description", content: "Trusted residential & commercial plumber in Brownwood, TX. 24-hour emergency service. Call (325) 641-2662." },
+      { property: "og:title", content: "M. Webb Plumbing Co. — Plumber in Brownwood, TX | 35+ Yrs Experience" },
+      { property: "og:description", content: "Trusted residential & commercial plumber in Brownwood, TX. 24-hour emergency plumbing, leak detection, water line repair & more. Call (325) 641-2662." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "theme-color", content: "#0e2747" },
+      { name: "twitter:title", content: "M. Webb Plumbing Co. — Plumber in Brownwood, TX | 35+ Yrs Experience" },
+      { name: "twitter:description", content: "Trusted residential & commercial plumber in Brownwood, TX. 24-hour emergency plumbing, leak detection, water line repair & more. Call (325) 641-2662." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c09f538b-c7ce-4af9-b34a-155583853762/id-preview-1265a79e--0285eb43-f9c9-41d0-9b25-5b35290a15f1.lovable.app-1781775300375.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c09f538b-c7ce-4af9-b34a-155583853762/id-preview-1265a79e--0285eb43-f9c9-41d0-9b25-5b35290a15f1.lovable.app-1781775300375.png" },
     ],
     links: [
       {
