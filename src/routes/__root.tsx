@@ -11,6 +11,12 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { Header } from "@/components/site/Header";
+import { Footer } from "@/components/site/Footer";
+import { FloatingCTA } from "@/components/site/FloatingCTA";
+import { Toaster } from "@/components/ui/sonner";
+import { JsonLd } from "@/components/site/JsonLd";
+import { localBusinessSchema } from "@/lib/seo";
 
 function NotFoundComponent() {
   return (
@@ -77,20 +83,24 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "M. Webb Plumbing Co. — Plumber in Brownwood, TX | 35+ Yrs Experience" },
+      { name: "description", content: "Trusted residential & commercial plumber in Brownwood, TX. 24-hour emergency plumbing, leak detection, water line repair & more. Call (325) 641-2662." },
+      { name: "author", content: "M. Webb Plumbing Co. LLC" },
+      { property: "og:site_name", content: "M. Webb Plumbing Co." },
+      { property: "og:title", content: "M. Webb Plumbing Co. — Plumber in Brownwood, TX" },
+      { property: "og:description", content: "Trusted residential & commercial plumber in Brownwood, TX. 24-hour emergency service. Call (325) 641-2662." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "theme-color", content: "#0e2747" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
       },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" },
     ],
   }),
   shellComponent: RootShell,
@@ -118,8 +128,16 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <div className="flex min-h-screen flex-col bg-background">
+        <Header />
+        <main className="flex-1 pb-20 md:pb-0">
+          <Outlet />
+        </main>
+        <Footer />
+        <FloatingCTA />
+      </div>
+      <Toaster richColors position="top-center" />
+      <JsonLd data={localBusinessSchema} />
     </QueryClientProvider>
   );
 }
