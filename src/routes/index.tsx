@@ -58,7 +58,7 @@ function Index() {
             </Reveal>
             <Reveal delay={80}>
               <h1 className="mt-6 font-display text-5xl font-bold leading-[1.02] tracking-tight md:text-6xl lg:text-7xl">
-                Trusted Plumbing<br />Experts in <span className="text-gradient-brand">Brownwood, TX</span>
+                Trusted Plumbing Experts in <span className="text-gradient-brand">Brownwood, TX</span>
               </h1>
             </Reveal>
             <Reveal delay={160}>
@@ -76,7 +76,10 @@ function Index() {
                 </Link>
               </div>
             </Reveal>
-            <Reveal delay={320}>
+           
+          </div>
+
+         <Reveal delay={320}>
               <ul className="mt-10 grid gap-3 sm:grid-cols-2">
                 {trustBadges.map((b) => (
                   <li key={b.label} className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur">
@@ -88,23 +91,6 @@ function Index() {
                 ))}
               </ul>
             </Reveal>
-          </div>
-
-          <Reveal delay={200}>
-            <div className="relative">
-              <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-cta/40 to-brand/30 blur-2xl" />
-              <div className="relative glass-dark rounded-2xl p-6 text-white shadow-elegant">
-                <div className="flex items-center justify-between">
-                  <h2 className="font-display text-xl font-bold">Get a Free Estimate</h2>
-                  <span className="rounded-full bg-cta/20 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-cta">Fast Reply</span>
-                </div>
-                <p className="mt-1 text-sm text-white/70">No obligation. We'll call you back within the hour.</p>
-                <div className="mt-5">
-                  <QuoteForm compact />
-                </div>
-              </div>
-            </div>
-          </Reveal>
         </div>
 
         {/* Marquee strip */}
