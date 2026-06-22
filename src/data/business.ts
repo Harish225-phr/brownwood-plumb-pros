@@ -7,7 +7,7 @@ export const business = {
   city: "Brownwood",
   state: "TX",
   zip: "76801",
-  phone: "(325) 641-2662",
+  phone: "+13253280435",
   phoneRaw: "+13256412662",
   email: "webbplumbing@verizon.net",
   website: "mwebbplumbingco.com",
